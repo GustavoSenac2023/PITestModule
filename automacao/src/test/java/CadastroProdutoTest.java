@@ -46,6 +46,10 @@ public class CadastroProdutoTest extends BaseTest {
             .inputPesquisa("D")
             .clickSubmit();
         page.clickDel();
+        String res3=driver.switchTo().alert().getText();
+        
+        driver.switchTo().alert().accept();
+        Assert.assertTrue(res3.contains("Sucess"));
         
     }
 }
