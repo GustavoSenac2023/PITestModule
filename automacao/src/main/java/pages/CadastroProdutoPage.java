@@ -20,6 +20,8 @@ public class CadastroProdutoPage extends BasePage {
     private WebElement inputSearch;
     @FindBy(id = "del")
     private WebElement btnDel;
+    @FindBy(id = "alt")
+    private WebElement btnAlt;
     @FindBy(id = "op")
     private WebElement btnSubmit;
     @FindBy(id = "titulo")
@@ -54,29 +56,35 @@ public class CadastroProdutoPage extends BasePage {
     }
 
     public CadastroProdutoPage inputCpf(String cpf){
+        inputCpf.clear();
         inputCpf.sendKeys(cpf);
         return this;
     }
 
     public CadastroProdutoPage inputQuant(String quant){
+        inputQuant.clear();
         inputQuant.sendKeys(quant);
         return this;
     }
     
     public CadastroProdutoPage inputId(String codigo){
+        inputId.clear();
         inputId.sendKeys(codigo);
         return this;
     }
 
     public CadastroProdutoPage inputTitulo (String titulo){
+        inputTitulo.clear();
         inputTitulo.sendKeys(titulo);
         return this;
     }
     public CadastroProdutoPage inputAutor (String autor){
+        inputAutor.clear();
         inputAutor.sendKeys(autor);
         return this;
     }
     public CadastroProdutoPage inputNome (String nome){
+        inputNome.clear();
         inputNome.sendKeys(nome);
         return this;
     }
@@ -102,19 +110,23 @@ public class CadastroProdutoPage extends BasePage {
     }
 
     public CadastroProdutoPage inputData (String data){
+        inputData.clear();
         inputData.sendKeys(data);
         return this;
     }
     public CadastroProdutoPage inputPessoa (String pessoa){
+        inputPessoa.clear();
         inputPessoa.sendKeys(pessoa);
         return this;
     }
     public CadastroProdutoPage inputLivro (String livro){
+        inputLivro.clear();
         inputLivro.sendKeys(livro);
         return this;
     }
 
     public CadastroProdutoPage inputPesquisa (String word){
+        inputSearch.clear();
         inputSearch.sendKeys(word);
         return this;
     }
@@ -142,6 +154,10 @@ public class CadastroProdutoPage extends BasePage {
     }
     public CadastroProdutoPage clickDel(){
         btnDel.click();
+        return this;
+    }
+    public CadastroProdutoPage clickAlt(){
+        btnAlt.click();
         return this;
     }
     public String buscarResultadoCadastro() {
